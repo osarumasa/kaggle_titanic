@@ -1,0 +1,23 @@
+#イメージビルド～コンテナ起動
+version: "3"
+services:
+  jupyter:
+    #コンテナネーム設定
+    container_name: kaggle-titanic
+    #context Dockerfileのあるディレクトリのパスを指定
+    #dockerfile 指定したファイル名のdockerfileを指定
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    entrypoint:
+      jupyter-lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token='' --notebook-dir=/workspace
+    #コンテナ側のポート
+    expose:
+      - "8888"
+    #ホスト側ポートへの接続を許可する接続元IP：ホスト側ポート：コンテナ側ポート
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ./root_jupyter:/root/.jupyter
+      - ./workspace:/workspace
