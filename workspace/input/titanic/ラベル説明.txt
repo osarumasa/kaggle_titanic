@@ -1,0 +1,12 @@
+ 0   PassengerId  891 non-null    int64  　：乗客ID
+ 1   Survived     891 non-null    int64  　：生存有無　0 = No, 1 = Yes
+ 2   Pclass       891 non-null    int64  　：Ticket class　1 = 1st, 2 = 2nd, 3 = 3rd
+ 3   Name         891 non-null    object 　：名前
+ 4   Sex          891 non-null    object 　：性別
+ 5   Age          714 non-null    float64　：年齢
+ 6   SibSp        891 non-null    int64  　：タイタニック号に乗船した兄弟／配偶者
+ 7   Parch        891 non-null    int64  　：タイタニック号に乗船した親子
+ 8   Ticket       891 non-null    object 　：チケット番号
+ 9   Fare         891 non-null    float64　：旅客運賃
+ 10  Cabin        204 non-null    object 　：キャビン番号
+ 11  Embarked     889 non-null    object 　：乗船港　	C = Cherbourg, Q = Queenstown, S = Southampton
