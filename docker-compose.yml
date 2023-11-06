@@ -21,3 +21,4 @@ services:
     volumes:
       - ./root_jupyter:/root/.jupyter
       - ./workspace:/workspace
+      - ./.kaggle:/root/.kaggle
